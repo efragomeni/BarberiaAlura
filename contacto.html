@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Contacto</title>
+  </head>
+  <body>
+    <header>
+      <div class="caja">
+        <h1><img src="imagenes/logo.png" alt="Logo de la barberia alura" /></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!-- mobileinputtype.com xa entrar a ver los tipos de input -->
+      <form action="">
+        <label for="nombreApellido">Nombre y Apellido:</label>
+        <input type="text" id="nombreApellido" class="input-padron" required />
+
+        <label for="correoElectronico">Correo electrónico:</label>
+        <input
+          type="email"
+          id="correoElectronico"
+          class="input-padron"
+          required
+          placeholder="email@dominio.com"
+        />
+
+        <label for="telefono">Teléfono:</label>
+        <input
+          type="tel"
+          id="telefono"
+          class="input-padron"
+          required
+          placeholder="(XX) XXXX-XXXX"
+        />
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea
+          name=""
+          id="mensaje"
+          cols="70"
+          rows="10"
+          class="input-padron"
+          required
+        ></textarea>
+
+        <div>
+          <p>¿En cúal horario prefiere ser atendido?</p>
+          <select name="" id="">
+            <option value="">Mañana</option>
+            <option value="">Tarde</option>
+            <option value="">Noche</option>
+          </select>
+        </div>
+
+        <!-- en vez de div puedo usar fielset esto le dice al navegador q los elementos conforman un grupo eso si, no usa la etiqueta p como "titulo" usa la etiqueta legend -->
+        <div>
+          <p class="test" id="test">¿Cómo le gustaría que lo contactemos?</p>
+          <!-- name contacto en todos iguales xa q solo se pueda seleccionar uno por vez -->
+
+          <!-- Inputs dentro de label xa que salga primero el label y al laod el radio -->
+
+          <label for="radio-email"
+            ><input
+              type="radio"
+              name="contacto"
+              value="email"
+              id="radio-email"
+            />Email</label
+          >
+
+          <label for="radio-telefono"
+            ><input
+              type="radio"
+              name="contacto"
+              value="telefono"
+              id="radio-telefono"
+            />Teléfono</label
+          >
+
+          <label for="radio-whatsapp"
+            ><input
+              type="radio"
+              name="contacto"
+              value="whatsapp"
+              id="radio-whatsapp"
+              checked
+            />Whatsapp</label
+          >
+        </div>
+
+        <label class="checkbox">
+          <input type="checkbox" checked />¿Le gustaria recibir novedades de la
+          Barberia Alura?</label
+        >
+        <input type="submit" value="Enviar formulario" class="enviar" />
+      </form>
+
+      <table>
+        <thead>
+          <th>Día</th>
+          <th>Horario</th>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lunes</td>
+            <td>08h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Miércoles</td>
+            <td>08h ~ 20h</td>
+          </tr>
+          <tr>
+            <td>Viernes</td>
+            <td>08h ~ 20h</td>
+          </tr>
+        </tbody>
+      </table>
+    </main>
+    <footer>
+      <img src="imagenes/logo-blanco.png" alt="Logo de la barberia alura" />
+      <p class="copyright">© Copyright Barberia Alura-2020</p>
+      <!-- o &copy saco esto de unicode-table en internet -->
+    </footer>
+  </body>
+</html>
